@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="home.css" />
+  </head>
+
+  <body>
+    <div class="topmenu">
+      <div class="d-flex container2 justify-content-between align-items-center">
+        <div class="">Logo</div>
+        <div class="">
+          <ul class="main_menu d-flex justify-cotent-center">
+            <li><a class="nav-link" href="">Trang chủ</a></li>
+            <li><a class="nav-link" href="">Sản phẩm</a></li>
+            <li><a class="nav-link" href="">Bài viết</a></li>
+            <li><a class="nav-link" href="">Giới thiệu</a></li>
+            <li><a class="nav-link" href="">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="cart">
+          <div class="d-flex justify-content-end">
+            <a class="nav-link"><i class="far fa-heart"></i></a>
+            <a class="nav-link font-bold mx-3" href=""
+              ><i class="fas fa-user"></i> Sign in</a
+            >
+            <div class="mb-3">
+              <button
+                class="btn btn_cart btn-primary btn-sm"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample"
+              >
+                <div>
+                  <i class="fas fa-shopping-cart"></i>
+                  <strong>$0.00</strong>
+                </div>
+              </button>
+            </div>
+
+            <div
+              class="offcanvas offcanvas-end"
+              tabindex="-1"
+              id="offcanvasExample"
+              aria-labelledby="offcanvasExampleLabel"
+            >
+              <div class="offcanvas-header">
+                <a class="offcanvas-title nav-link" id="offcanvasExampleLabel">
+                  <span class="d-flex">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M23.4 8.016c-0.336-0.336-0.768-0.504-1.248-0.504h-4.128l-5.304-7.104c-0.144-0.216-0.408-0.336-0.672-0.336s-0.504 0.12-0.624 0.336l-5.328 7.104h-4.248c-0.936 0-1.704 0.768-1.704 1.704v1.848c0 0.936 0.768 1.704 1.704 1.704h0.24l1.464 8.928c0.216 1.272 1.296 2.208 2.592 2.208h11.688c1.296 0 2.4-0.936 2.592-2.208l1.464-8.928h0.24c0.936 0 1.704-0.768 1.704-1.704v-1.848c0.072-0.432-0.096-0.888-0.432-1.2zM20.424 12.792l-1.464 8.64c-0.096 0.504-0.528 0.888-1.032 0.888h-11.712c-0.504 0-0.96-0.384-1.032-0.888l-1.464-8.664h16.704zM8.088 7.512l3.96-5.304 3.984 5.304h-7.944zM3.84 10.152c0 0.432 0.24 0.816 0.576 1.056h-2.568c-0.048 0-0.144-0.072-0.144-0.144v-1.848c0-0.048 0.048-0.12 0.144-0.12h2.568c-0.336 0.216-0.576 0.624-0.576 1.056zM6.336 9.816l0.552-0.744h10.32l0.552 0.744c-0.024 0.096-0.048 0.216-0.048 0.336 0 0.432 0.216 0.816 0.576 1.056h-12.48c0.336-0.24 0.576-0.624 0.576-1.056 0-0.12-0.024-0.216-0.048-0.336zM20.28 10.152c0-0.432-0.24-0.816-0.576-1.056h2.568c0.048 0 0.144 0.072 0.144 0.144v1.824c0 0.048-0.072 0.144-0.144 0.144h-2.568c0.336-0.24 0.576-0.624 0.576-1.056zM15.768 22.080c0.432 0 0.792-0.36 0.792-0.792v-7.44c0-0.432-0.36-0.792-0.792-0.792s-0.792 0.36-0.792 0.792v7.416c0 0.456 0.36 0.816 0.792 0.816zM8.376 22.080c0.432 0 0.792-0.36 0.792-0.792v-7.44c0-0.432-0.36-0.792-0.792-0.792s-0.792 0.36-0.792 0.792v7.416c0 0.456 0.36 0.816 0.792 0.816zM12.072 22.080c0.432 0 0.792-0.36 0.792-0.792v-7.44c0-0.432-0.36-0.792-0.792-0.792s-0.792 0.36-0.792 0.792v7.416c0 0.456 0.36 0.816 0.792 0.816z"
+                        ></path>
+                      </svg>
+                    </span>
+                    <span class="equality_cart">0</span>
+                  </span>
+                </a>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <div>
+                  <strong>không có sản phẩm trong giỏ hàng</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide container3 row">
+        <div class="col-md-12">
+            <div class="page_product__breadcrumb py-3">
+                <a class="page_product__breadcrumb_items" href="">Home</a>
+                <span class="px-2">/</span>
+                <a class="page_product__breadcrumb_items" href="">Wearable Items</a>
+             </div>
+         <div class="detail_product d-flex">
+            <div class=" justify-content-start" style="width: 38%;">
+              <div class="conttent-left">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                     <div class="carousel-indicators d-none">
+                         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                             aria-current="true" aria-label="Slide 1"></button>
+                         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                             aria-label="Slide 2"></button>
+                         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                             aria-label="Slide 3"></button>
+                     </div>
+                     <div class="carousel-inner">
+                         <div class="carousel-item active" data-bs-interval="10000">
+                             <img src="https://v9m6d2m2.rocketcdn.me/elementor/demos/minimal-electronics/wp-content/uploads/sites/71/2022/02/7_2-1.jpeg" id="img1" class="d-block w-100" alt="...">
+                             <div class="carousel-caption d-none d-md-block">
+                             </div>
+                         </div>
+                         <div class="carousel-item active" data-bs-interval="10000">
+                          <img src="https://v9m6d2m2.rocketcdn.me/elementor/demos/minimal-electronics/wp-content/uploads/sites/71/2022/02/30_3-1.jpeg" id="img2" class="d-block w-100" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                          </div>
+                      </div>
+     
+                     </div>
+                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                         data-bs-slide="prev">
+                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                         <span class="visually-hidden">Previous</span>
+                     </button>
+                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                         data-bs-slide="next">
+                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                         <span class="visually-hidden">Next</span>
+                     </button>
+                     <div class="row py-3 ">
+                         <div class=" smallimg-item d-flex justify-content-center">
+                        
+                             <a class="link-side px-2" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                             href=""><img style="width: 70px;" src="https://v9m6d2m2.rocketcdn.me/elementor/demos/minimal-electronics/wp-content/uploads/sites/71/2022/02/7_2-1.jpeg" alt=""></a>
+                             <a class="link-side px-2" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                             href=""><img style="width: 70px;" src="https://v9m6d2m2.rocketcdn.me/elementor/demos/minimal-electronics/wp-content/uploads/sites/71/2022/02/30_3-1.jpeg" alt=""></a>
+
+                         </div>
+                     </div>
+                 </div>
+             </div>
+            </div>
+            <div class=" justify-content-start" style="width: 38%;">
+            <div><h2>Resolution Bluetooth 4.0 Wireless Speakers</h2></div>
+            <div class="star_rating py-1">
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span style="color: black;">(1 customer review)</span>
+            </div>
+            <div class="price_product pb-4">
+              <h4>
+            <div class="py-3">
+              <span class="price_discount">$300.00</span>
+              <span class="price">$275.50</span>
+            </div>
+          </h4>
+               
+             
+            </div>
+            <div>
+              <p class="fw-bold">This Bluetooth speaker delivers big sound, making it then only music system you’ll need in or out of the house. Prem materials such as anodized aluminum & durable polymers withstand the rigor of an active lifestyle.</p>
+            </div>
+            <div>
+              <div class="buttons_added d-flex py-3">
+                <input class="minus is-form" type="button" value="-">
+                <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number" value="1">
+                <input class="plus is-form" type="button" value="+">
+                <div class="button_buy px-2">
+                  <a class="nav-link button_addtocart btn btn-primary" style="width: 60%;" href="">
+                    <span>
+                      <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M23.4 8.016c-0.336-0.336-0.768-0.504-1.248-0.504h-4.128l-5.304-7.104c-0.144-0.216-0.408-0.336-0.672-0.336s-0.504 0.12-0.624 0.336l-5.328 7.104h-4.248c-0.936 0-1.704 0.768-1.704 1.704v1.848c0 0.936 0.768 1.704 1.704 1.704h0.24l1.464 8.928c0.216 1.272 1.296 2.208 2.592 2.208h11.688c1.296 0 2.4-0.936 2.592-2.208l1.464-8.928h0.24c0.936 0 1.704-0.768 1.704-1.704v-1.848c0.072-0.432-0.096-0.888-0.432-1.2zM20.424 12.792l-1.464 8.64c-0.096 0.504-0.528 0.888-1.032 0.888h-11.712c-0.504 0-0.96-0.384-1.032-0.888l-1.464-8.664h16.704zM8.088 7.512l3.96-5.304 3.984 5.304h-7.944zM3.84 10.152c0 0.432 0.24 0.816 0.576 1.056h-2.568c-0.048 0-0.144-0.072-0.144-0.144v-1.848c0-0.048 0.048-0.12 0.144-0.12h2.568c-0.336 0.216-0.576 0.624-0.576 1.056zM6.336 9.816l0.552-0.744h10.32l0.552 0.744c-0.024 0.096-0.048 0.216-0.048 0.336 0 0.432 0.216 0.816 0.576 1.056h-12.48c0.336-0.24 0.576-0.624 0.576-1.056 0-0.12-0.024-0.216-0.048-0.336zM20.28 10.152c0-0.432-0.24-0.816-0.576-1.056h2.568c0.048 0 0.144 0.072 0.144 0.144v1.824c0 0.048-0.072 0.144-0.144 0.144h-2.568c0.336-0.24 0.576-0.624 0.576-1.056zM15.768 22.080c0.432 0 0.792-0.36 0.792-0.792v-7.44c0-0.432-0.36-0.792-0.792-0.792s-0.792 0.36-0.792 0.792v7.416c0 0.456 0.36 0.816 0.792 0.816zM8.376 22.080c0.432 0 0.792-0.36 0.792-0.792v-7.44c0-0.432-0.36-0.792-0.792-0.792s-0.792 0.36-0.792 0.792v7.416c0 0.456 0.36 0.816 0.792 0.816zM12.072 22.080c0.432 0 0.792-0.36 0.792-0.792v-7.44c0-0.432-0.36-0.792-0.792-0.792s-0.792 0.36-0.792 0.792v7.416c0 0.456 0.36 0.816 0.792 0.816z"
+                      ></path>
+                    </svg> Add To Cart
+                    </span>
+                  </a>
+                </div>  
+              </div>
+              
+              <div>
+                <a class="nav-link" href="">
+                  <i class="fa-regular fa-heart"></i>
+                  <span class="px-1">Add to wishlist</span>
+                </a>
+              </div>
+              <div class="py-1">
+                <span>Categories: </span>
+                <a style="text-decoration: none;" href="">Computer & PC,</a>
+                <a style="text-decoration: none;" href="">Wearable Items</a>
+              </div>
+              <div class="py-1">
+                <span>Tags: </span>
+                <a style="text-decoration: none;" href="">Headphone,</a>
+                <a style="text-decoration: none;" href="">Speaker</a>
+              </div>
+
+            </div>
+            <div></div></div>
+            <div class=" justify-content-start" style="width: 24%;">
+            <div class="product_categories">
+              <div class="product_categories_content">
+                <h4 class="product_categories_title pb-4 fw-bold">Product categories</h4>
+                <ul class="product_categories_content_items" style="list-style: none;">
+                  <li>
+                    <a href="">Computer & PC <span>(6)</span></a>
+                  </li>
+                  <li>
+                    <a href="">Smart Gadgets <span>(2)</span></a>
+                  </li>
+                  <li>
+                    <a href="">TV & Monitors <span>(5)</span></a>
+                  </li>
+                  <li>
+                    <a style="opacity: 1;" href="">Wearable Items<span>(9)</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="product_categories">
+              <div class="product_categories_content">
+                <h4 class="product_categories_title pb-4 fw-bold">Products</h4>
+                <ul class="product_categories_content_items2" style="list-style: none;">
+                  <li class="d-flex">
+                    <div style="width: 30%;">
+                      <a style="opacity: 1;" href="">
+                        <img style="width: 100%; padding-right: 10px;" src="https://v9m6d2m2.rocketcdn.me/elementor/demos/minimal-electronics/wp-content/uploads/sites/71/2022/02/Image2-366x366.jpeg" alt="">
+                      </a>
+                    </div>
+                    <div  style="width: 70%;">
+                      <p class="Product_title">
+                        <a class="fw-bold"href="">SmartThings Indoor 1080p Wi-Fi Security Camera</a>
+                      </p>
+                      <span>
+                        $800.00
+                      </span>
+                      <div>
+                      
+                  </li>
+                  <li class="d-flex">
+                    <div style="width: 30%;">
+                      <a style="opacity: 1;" href="">
+                        <img style="width: 100%; padding-right: 10px;" src="https://v9m6d2m2.rocketcdn.me/elementor/demos/minimal-electronics/wp-content/uploads/sites/71/2022/02/Image1-366x366.jpeg" alt="">
+                      </a>
+                    </div>
+                    <div  style="width: 70%;">
+                      <p class="Product_title">
+                        <a class="fw-bold"href="">Nest Mini Smart Speaker with Google Assistant</a>
+                      </p>
+                      <span class="price_discount">$500.00</span>
+                      <span class="price">$435.50</span>
+                      <div>
+                      
+                  </li>
+                  <li class="d-flex">
+                    <div style="width: 30%;">
+                      <a style="opacity: 1;" href="">
+                        <img style="width: 100%; padding-right: 10px;" src="https://v9m6d2m2.rocketcdn.me/elementor/demos/minimal-electronics/wp-content/uploads/sites/71/2022/02/30_3-1.jpeg" alt="">
+                      </a>
+                    </div>
+                    <div  style="width: 70%;">
+                      <p class="Product_title">
+                        <a class="fw-bold"href="">Nest Learning Thermostat 3rd Gen in Stainless Steel</a>
+                      </p>
+                      <span>
+                        $522.00
+                      </span>
+                      <div>
+                      
+                  </li>
+                  <li class="d-flex">
+                    <div style="width: 30%;">
+                      <a style="opacity: 1;" href="">
+                        <img style="width: 100%; padding-right: 10px;" src="https://v9m6d2m2.rocketcdn.me/elementor/demos/minimal-electronics/wp-content/uploads/sites/71/2022/02/Image-3-366x366.jpeg" alt="">
+                      </a>
+                    </div>
+                    <div  style="width: 70%;">
+                      <p class="Product_title">
+                        <a class="fw-bold"href="">Linksys – Velop AC2200 Band Mesh Wi-Fi System</a>
+                      </p>
+                      <span class="price_discount">$300.00</span>
+                      <span class="price">$275.50</span>
+                      <div>
+                      
+                  </li>
+                  <li class="d-flex">
+                    <div style="width: 30%;">
+                      <a style="opacity: 1;" href="">
+                        <img style="width: 100%; padding-right: 10px;" src="https://v9m6d2m2.rocketcdn.me/elementor/demos/minimal-electronics/wp-content/uploads/sites/71/2022/02/29_1-1-366x366.jpeg" alt="">
+                      </a>
+                    </div>
+                    <div  style="width: 70%;">
+                      <p class="Product_title">
+                        <a class="fw-bold"href="" title="Google – Nest Hello Smart Wi-Fi Video Doorbell">Google – Nest Hello Smart Wi-Fi Video Doorbell</a>
+                      </p>
+                      <span>
+                        $1300.00
+                      </span>
+                      <div>
+                      
+                  </li>
+                </ul>
+              </div>
+            </div>
+            </div>
+         </div>
+</div> 
+<div class="row desription_detail">
+  <div class="desciption_product" style="width: 76%;">
+    <p>
+      <a class="button_description btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        Link with href
+      </a>
+    </p>
+  <div class="collapse" id="collapseExample">
+  <div class="description_product_items pt-4">
+  <div class="detail_des row">
+  <div class="col-3 detail_des_title">Overview</div>
+  <div class="col-9">
+  <h3 class="fw-bold">
+  Featuring True360 Sound Technology
+  </h3>
+  <p>
+  With its compact footprint and convenient leathers carrying handles the Beolit 17 wireless Bluetooth speaker ready to accompany you on all of life’s adventures Featuring 360-degrees sound technology the Beolit 17 lets you enjoying immersive Bang & Olufsen signature sound whenever and wherever you’d like Whether you’re at home or on the road you can transform any moment with the power clarity portable.
+  </p>
+  </div>
+  </div>
+  <div class="detail_des row">
+  <div class="col-3 detail_des_title"></div>
+  <div class="col-9">
+    <img width="100%" src="https://v9m6d2m2.rocketcdn.me/elementor/demos/minimal-electronics/wp-content/uploads/sites/71/2022/02/Image-2.jpeg" alt="">
+  </div>
+  </div>
+  <div class="detail_des row">
+  <div class="col-3 detail_des_title">Features</div>
+  <div class="col-9">
+  <div class="text_discrip d-flex">
+  <p>
+  Auto Schedule - </p>
+  <span style="opacity: 0.6;">True360 Sound Technology featuring Bang & Olufsen Signature Sound</span>
+  </div>
+  <div class="text_discrip d-flex">
+  <p>
+  Auto Away - </p>
+  <span style="opacity: 0.6;">Premium materials are built to last</span>
+  </div>
+  <div class="text_discrip d-flex">
+  <p>
+  Remote Control - </p>
+  <span style="opacity: 0.6;">Connect button activates intelligent features via Bang & Olufsen App</span>
+  </div>
+  <div class="text_discrip d-flex">
+  <p>
+  Energy Star - </p>
+  <span style="opacity: 0.6;">Portable Bluetooth speaker keeps going with up to 24 hours of battery life</span>
+  </div>
+  </div>
+  <div class="detail_des row">
+  <div class="col-3 detail_des_title">What’s Included</div>
+  <div class="col-9">
+  <h5>Beolit 17</h5>
+  <h5>Power Adapter</h5>
+  <h5>1.25m USB-A to USB-C cable</h5>
+  <h5>Quick Start Guide</h5>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  </div>
+  <div class="hot_product_sale" style="width: 24%;">
+<div class="hot_product_sale_content">
+  <div class="hot_product_sale_title">
+    <h5>Most Powerfull</h5>
+    <h2 class="fw-bold">Powerbank</h2>
+    <div class="button_buy_hot_sale px-2">
+      <a class="nav-link button_addtocart btn btn-primary" style="width: 30%;" href="">
+        <span>
+          Buy Now
+        </span>
+        </a>  </div>
+  </div>
+  <div class="hot_product_sale_img">
+    <img width="100%" style="transition: all 0.5s ease-in-out;" src="https://v9m6d2m2.rocketcdn.me/elementor/demos/minimal-electronics/wp-content/uploads/sites/71/2022/02/Banner.jpeg" alt="">
+  </div>
+  </div>
+  
+  </div>
+</div>
+</div>
+    <div class="footer">
+        <div class="container4">
+            <div class="row start_footer py-4">
+                <div class="col items_start_footer d-inline-flex">
+                    <div class="col-4"><img src="https://v9m6d2m2.rocketcdn.me/elementor/demos/minimal-electronics/wp-content/uploads/sites/71/2022/02/Icon-0-min.png" style="margin-left: 10px;" width="50" height="50" alt=""></div>
+                    <div class="col-8">
+                        <span class="fw-bold bigsize">Free Shipping Order $60</span>
+                        <p class="fw-light">Delivery Moves So Quickly</p>
+                
+                    </div> 
+                </div>
+                <div class="col items_start_footer d-inline-flex">
+                    <div class="col-4"><img src="https://v9m6d2m2.rocketcdn.me/elementor/demos/minimal-electronics/wp-content/uploads/sites/71/2022/02/Icon-1.png" style="margin-left: 10px;" width="50" height="50" alt=""></div>
+                    <div class="col-8">
+                        <span class="fw-bold bigsize">Easy & Fast Returns</span>
+                        <p class="fw-light">30 Days Free Return Policy</p>
+                
+                    </div> 
+                </div>
+                <div class="col items_start_footer d-inline-flex">
+                    <div class="col-4"><img src="https://v9m6d2m2.rocketcdn.me/elementor/demos/minimal-electronics/wp-content/uploads/sites/71/2022/02/Icon-2.png" style="margin-left: 10px;" width="50" height="50" alt=""></div>
+                    <div class="col-8">
+                        <span class="fw-bold bigsize">24/7 Customer Support</span>
+                        <p class="fw-light">Online Help By Our Agents</p>
+                
+                    </div> 
+                </div>
+                <div class="col items_start_footer d-inline-flex">
+                    <div class="col-4"><img src="https://v9m6d2m2.rocketcdn.me/elementor/demos/minimal-electronics/wp-content/uploads/sites/71/2022/02/Icon-3-min.png" style="margin-left: 10px;" width="50" height="50" alt=""></div>
+                    <div class="col-8">
+                        <span class="fw-bold bigsize">100% Secure Payments</span>
+                        <p class="fw-light">PayPal / MasterCard / Visa</p>
+                
+                    </div> 
+                </div>
+            </div>
+            <div class="row mid_footer py-4">
+                <div class="col-7">
+                    <div class="row">
+                        <div class="col-4 mid_footer_items">
+                            <ul id="footer_menu">
+                                <li><a class="nav-link text-uppercase" href="">Company</a></li>
+                                <li><a class="nav-link" href="">About Us</a></li>
+                                <li><a class="nav-link" href="">Carrers</a></li>
+                                <li><a class="nav-link" href="">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-4 mid_footer_items">
+                            <ul id="footer_menu">
+                                <li><a class="nav-link text-uppercase" href="">shop</a></li>
+                                <li><a class="nav-link" href="">Appliances</a></li>
+                                <li><a class="nav-link" href="">Gedgets</a></li>
+                                <li><a class="nav-link" href="">Wearables</a></li>
+                                <li><a class="nav-link" href="">Shop All</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-4 mid_footer_items">
+                            <ul id="footer_menu">
+                                <li><a class="nav-link text-uppercase" href="">support</a></li>
+                                <li><a class="nav-link" href="">Contact Us</a></li>
+                                <li><a class="nav-link" href="">Returns</a></li>
+                                <li><a class="nav-link" href="">Frequently Asked Questions</a></li>
+                                <li><a class="nav-link" href="">Privacy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="note_fotter">
+                        <span class="text-uppercase py" style="font-weight: 900;color: rgb(90,126,153);">SUBSCRIBE</span>
+                        <p class="py-3">Enter your email address to get <a class="discount_footer" href="">$20 off your first order</a></p>
+                    </div>
+                    <div class="search_footer"><p>
+                        <input type="email" name="EMAIL" placeholder="Your E-mail Address" required="">
+                        <input type="submit" value="Send">
+                        </p></div>
+                    <div class="footer_icons text-center">
+                        <div class="footer_icon fb">
+                            <i class="fa-brands fa-facebook"></i>
+                            </div>
+                            <div class="footer_icon tw ">
+                            <i class="fa-brands fa-twitter"></i>  </div>
+                            <div class="footer_icon yt ">
+                            <i class="fa-brands fa-youtube"></i>  </div>
+                    </div>
+                <div>
+                </div>
+
+            </div>
+            <div class="row end_footer pt-4">
+                <div class="col-3">logo</div>
+                <div class="col-9">
+                    <div class="d-inline-flex">
+                    <span class="px-1 fw-bold">Phone:</span>
+                    <p style="color: grey;opacity: 0.8;">0334579994.</p>
+                    <span class="px-1 fw-bold">Email:</span>
+                    <p style="color: grey;opacity: 0.8;">Tanlunlk122@gmail.com.</p>
+                </div>
+                <div class="d-flex">
+                    <span class="px-1 fw-bold">Copyright 2023:</span>
+                    <p style="color: grey;opacity: 0.8;">TanVIpPro.</p></div>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"
+      integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript">
+      $(".filtering").slick({
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        infinite: true,
+      });
+
+      var filtered = false;
+
+      $(".js-filter").on("click", function () {
+        if (filtered === false) {
+          $(".filtering").slick("slickFilter", ":even");
+          $(this).text("Unfilter Slides");
+          filtered = true;
+        } else {
+          $(".filtering").slick("slickUnfilter");
+          $(this).text("Filter Slides");
+          filtered = false;
+        }
+      });
+    </script>
+    <script>
+      // Đảm bảo jQuery đã được tải trước
+      $(document).ready(function() {
+        $('input.input-qty').each(function() {
+          var $this = $(this),
+            qty = $this.parent().find('.is-form'),
+            min = Number($this.attr('min')),
+            max = Number($this.attr('max'));
+          if (min == 0) {
+            var d = 0;
+          } else {
+            d = min;
+          }
+          $(qty).on('click', function() {
+            if ($(this).hasClass('minus')) {
+              if (d > min) d += -1;
+            } else if ($(this).hasClass('plus')) {
+              var x = Number($this.val()) + 1;
+              if (x <= max) d += 1;
+            }
+            $this.attr('value', d).val(d);
+          });
+        });
+      });
+    </script>
+  
+  </body>
+</html>
